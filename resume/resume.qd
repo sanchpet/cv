@@ -1,0 +1,20 @@
+.docname {resume}
+.doctype {plain}
+.doclang {English}
+.theme {paperwhite} layout:{latex}
+
+.docauthors
+  - Aleksandr Petrov
+ 
+.center
+  ## Aleksandr Petrov
+  petrov@sanch.pet LinkedIn GitHub Telegram
+
+#### Work experience
+
+.row alignment:{spacebetween} cross:{start} gap:{1cm}
+    DevOps Engineer
+
+    **Saint-Petersburg, Russia**  
+    August 2025 - Present   
+

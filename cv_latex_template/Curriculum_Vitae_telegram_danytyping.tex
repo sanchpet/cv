@@ -1,0 +1,173 @@
+\documentclass[10pt,a4paper]{article}
+
+% --- Кодировки и шрифт ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{charter}
+\usepackage{microtype}
+
+% --- Вёрстка и утилиты ---
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{soul}              % подсветка
+\usepackage{enumitem}
+\usepackage{tabularx,array}
+\usepackage{ragged2e}          % аккуратные переносы в блоках
+
+% Чуть больше свободы для переноса, чтобы не было overfull hbox
+\emergencystretch=2em
+
+% --- Поля и интервалы ---
+\geometry{a4paper,left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Пули по левому полю, ровные интервалы
+\setlist[itemize]{leftmargin=*,labelsep=2.5mm,label=\textbullet,
+                  itemsep=1.6mm,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+% --- Цвета (подсветки и сервисные) ---
+\definecolor{cCyan}{HTML}{BDEBFF}
+\definecolor{cLime}{HTML}{B8F5B5}
+\definecolor{cOrange}{HTML}{FFE1B8}
+\definecolor{cPink}{HTML}{F4C7D1}
+\definecolor{cPurple}{HTML}{E0C7EE}
+\definecolor{cYellow}{HTML}{FFF7A8}
+\definecolor{rulegray}{gray}{0.25}
+\definecolor{softgray}{HTML}{E0E0E0}
+
+% --- Подсветка (переносы разрешены), неразрывный дефис для составных слов ---
+\newcommand{\hlbox}[2]{\begingroup\sethlcolor{#1}\hl{#2}\endgroup}
+\newcommand{\cyan}[1]{\hlbox{cCyan}{#1}}
+\newcommand{\lime}[1]{\hlbox{cLime}{#1}}
+\newcommand{\oran}[1]{\hlbox{cOrange}{#1}}
+\newcommand{\pink}[1]{\hlbox{cPink}{#1}}
+\newcommand{\violet}[1]{\hlbox{cPurple}{#1}}
+\newcommand{\yellow}[1]{\hlbox{cYellow}{#1}}
+\newcommand{\nbhy}{\mbox{-}}  % использовать как GPU\nbhy heavy, mixed\nbhy precision
+
+% --- Узкая серая плашка вокруг текста ---
+\newcommand{\graytag}[1]{\begingroup\setlength{\fboxsep}{1.3pt}\colorbox{softgray}{#1}\endgroup}
+
+% --- Контейнер пули: корректные переносы внутри ---
+\newcommand{\bulletblock}[1]{%
+  \begin{minipage}[t]{\linewidth}\RaggedRight #1\end{minipage}%
+}
+
+% ==== Точные зазоры (только где нужно) ====
+\newlength{\SectionGap}\setlength{\SectionGap}{6mm}   % над секциями
+\newlength{\JobGap}\setlength{\JobGap}{4mm}           % над должностями
+
+% --- Разделитель и секции (ТОЛЬКО верхнеуровневые заголовки) ---
+\newcommand{\thinrule}{\vspace{1mm}\color{rulegray}\hrule height0.5pt\color{black}\vspace{2mm}}
+\newcommand{\cvsection}[1]{\vspace{\SectionGap}{\bfseries\Large #1}\par\thinrule}
+
+% --- Базовый двухстрочный хедер (без доп. отступа) ---
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.33\textwidth}}
+\newcommand{\rowheader}[4]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X R@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\par
+}
+
+% --- Хедер только для должностей с нужным gap сверху ---
+\newcommand{\jobheader}[4]{%
+  \vspace{\JobGap}%
+  \rowheader{#1}{#2}{#3}{#4}%
+}
+
+\begin{document}
+
+% ================= Header =================
+\begin{center}
+  {\fontsize{24pt}{24pt}\selectfont\textbf{KARTUSHOV DANIL}}\\[2mm]
+  {\fontsize{9pt}{9pt}\selectfont
+  Email Address $\cdot$ \href{https://linkedin.com}{LinkedIn Url} $\cdot$
+  \href{https://portfolio.com}{Portfolio} $\cdot$
+  \href{https://github.com}{Github Url}}
+\end{center}
+
+% ================= Work Experience =================
+\cvsection{Work Experience}
+
+% Шаблон строки-примера
+\rowheader
+  {\graytag{\textbf{Work Title}}}
+  {\graytag{\textbf{City, Country}}}
+  {\graytag{\textit{Brief company description}}}
+  {\graytag{\textit{Date Start -- Date End}}}
+
+\begin{itemize}
+  \item \graytag{Use X--Y--Z formula -- Achieved [X] as measured by [Y] by doing [Z]}
+  \item \graytag{Make sure each bullet point is no longer than 3 sentences.}
+  \item \graytag{Have multiple resumes ready. Tailor the bullet points in CV to the job description.}
+  \item \graytag{No more than 4 bullets per each work experience.}
+\end{itemize}
+
+% -------- Deep Learning Researcher --------
+\jobheader{\textbf{Deep Learning Researcher}}{\textbf{San Francisco, US}}
+{Neuro — \violet{\textit{machine learning development tool for rapid model iteration}}}
+{March 2018 -- Feb.\ 2019}
+
+\begin{itemize}
+  \item \bulletblock{\pink{Improved} \oran{generative model training speed} \lime{by 25\%} by \cyan{refactoring}
+        \oran{GPU\nbhy heavy pipelines} \cyan{and introducing mixed\nbhy precision training} \oran{with PyTorch and NVIDIA Apex.}}
+  \item \bulletblock{\pink{Achieved} \lime{93\%+ top-1 accuracy} on \oran{custom image classification datasets}
+        \cyan{by adapting and fine-tuning} \oran{EfficientNet and ResNet architectures.}}
+  \item \bulletblock{\pink{Automated} \oran{a financial analytics pipeline processing} \lime{100K+ data points daily},
+        \cyan{increasing analyst productivity} \lime{by 30\%} \cyan{and reducing manual errors.}}
+\end{itemize}
+
+% -------- Software Engineer Intern --------
+\jobheader{\textbf{Software Engineer Intern}}{\textbf{San Francisco, US}}
+{Jetbrains — \violet{\textit{tools for software developers and project managers}}}
+{Jul 2017 -- Sept.\ 2017}
+
+\begin{itemize}
+  \item \bulletblock{\pink{Developed} an internal system for clustering \lime{1M+ code submissions}
+        \cyan{by learning} \oran{vector representations} \cyan{of syntax trees, improving detection of similar solutions} \lime{by $\sim$20\%.}}
+  \item \bulletblock{\pink{Enhanced} the learning experience \lime{for 10K+ users}
+        \cyan{by generating personalized tips based on structural code similarity, reducing repeated errors and boosting task completion rates.}}
+\end{itemize}
+% ================= Education =================
+\cvsection{Education}
+
+\rowheader{National Research University Higher School of Economics}{City, Country}
+{Master's in Machine Learning \& Data Analysis}{2020}
+GPA: 5.0/5
+
+\vspace{4mm}
+
+\rowheader{Academic University}{City, Country}
+{BSc in Applied Math \& Computer Science}{2018}
+GPA: 4.5/5
+
+% ================= Honors and Awards =================
+\cvsection{Honors and Awards}
+
+\noindent\begin{tabularx}{\textwidth}{@{}X R@{}}
+  \graytag{\textbf{Awards, Scholarships, Hackathons}} & \graytag{\textbf{Date}}
+\end{tabularx}\par
+\graytag{Details}\par\vspace{3mm}
+
+\rowheader{AiHack Hackathon}{March, 2018}{1st place}{}
+
+\vspace{2mm}
+
+\rowheader{AlphaBank Hackathon}{Dec, 2017}{1st place}{}
+
+
+% ================= Additional Information =================
+\cvsection{Additional Information}
+
+\textbf{Languages:} \yellow{Python, R, Java, Kotlin, C/C++, Scala, Ocaml, Haskell, Matlab} \vspace{1mm}\\
+\textbf{Technologies:} \yellow{git, bash, sql, gdb, docker, vagrant, jupyter, pytorch, tensorflow, keras} \vspace{1mm}\\
+\textbf{Certifications:} \yellow{Software Debugging, Design of Computer Programs, Advanced Operating Systems} \vspace{1mm}\\
+\textbf{Language Skills:} English fluent, Russian native
+
+
+\end{document}

@@ -1,0 +1,191 @@
+\documentclass[10pt,a4paper]{article}
+
+% --- Кодировки и шрифт ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{charter}
+\usepackage{microtype}
+
+% --- Вёрстка и утилиты ---
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{soul}              % подсветка
+\usepackage{enumitem}
+\usepackage{tabularx,array}
+\usepackage{ragged2e}          % аккуратные переносы в блоках
+
+% Чуть больше свободы для переноса, чтобы не было overfull hbox
+\emergencystretch=2em
+
+% --- Поля и интервалы ---
+\geometry{a4paper,left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Пули по левому полю, ровные интервалы
+\setlist[itemize]{leftmargin=*,labelsep=2.5mm,label=\textbullet,
+                  itemsep=1.6mm,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+% --- Цвета (подсветки и сервисные) ---
+\definecolor{cCyan}{HTML}{BDEBFF}
+\definecolor{cLime}{HTML}{B8F5B5}
+\definecolor{cOrange}{HTML}{FFE1B8}
+\definecolor{cPink}{HTML}{F4C7D1}
+\definecolor{cPurple}{HTML}{E0C7EE}
+\definecolor{cYellow}{HTML}{FFF7A8}
+\definecolor{rulegray}{gray}{0.25}
+\definecolor{softgray}{HTML}{E0E0E0}
+
+% --- Подсветка (переносы разрешены), неразрывный дефис для составных слов ---
+\newcommand{\hlbox}[2]{\begingroup\sethlcolor{#1}\hl{#2}\endgroup}
+\newcommand{\cyan}[1]{\hlbox{cCyan}{#1}}
+\newcommand{\lime}[1]{\hlbox{cLime}{#1}}
+\newcommand{\oran}[1]{\hlbox{cOrange}{#1}}
+\newcommand{\pink}[1]{\hlbox{cPink}{#1}}
+\newcommand{\violet}[1]{\hlbox{cPurple}{#1}}
+\newcommand{\yellow}[1]{\hlbox{cYellow}{#1}}
+\newcommand{\nbhy}{\mbox{-}}  % использовать как GPU\nbhy heavy, mixed\nbhy precision
+
+% --- Узкая серая плашка вокруг текста ---
+\newcommand{\graytag}[1]{\begingroup\setlength{\fboxsep}{1.3pt}\colorbox{softgray}{#1}\endgroup}
+
+% --- Контейнер пули: корректные переносы внутри ---
+\newcommand{\bulletblock}[1]{%
+  \begin{minipage}[t]{\linewidth}\RaggedRight #1\end{minipage}%
+}
+
+% ==== Точные зазоры (только где нужно) ====
+\newlength{\SectionGap}\setlength{\SectionGap}{6mm}   % над секциями
+\newlength{\JobGap}\setlength{\JobGap}{4mm}           % над должностями
+
+% --- Разделитель и секции (ТОЛЬКО верхнеуровневые заголовки) ---
+\newcommand{\thinrule}{\vspace{1mm}\color{rulegray}\hrule height0.5pt\color{black}\vspace{2mm}}
+\newcommand{\cvsection}[1]{\vspace{\SectionGap}{\bfseries\Large #1}\par\thinrule}
+
+% --- Базовый двухстрочный хедер (без доп. отступа) ---
+\newcolumntype{R}{>{\raggedleft\arraybackslash}p{0.33\textwidth}}
+\newcommand{\rowheader}[4]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X R@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\par
+}
+
+% --- Хедер только для должностей с нужным gap сверху ---
+\newcommand{\jobheader}[4]{%
+  \vspace{\JobGap}%
+  \rowheader{#1}{#2}{#3}{#4}%
+}
+
+\begin{document}
+
+% ================= Header =================
+\begin{center}
+  {\fontsize{28pt}{28pt}\selectfont\textbf{ALEKSANDR PETROV}}\\[2mm]
+  {\fontsize{10pt}{10pt}\selectfont
+  \href{mailto:petrov@sanch.pet}{petrov@sanch.pet} $\cdot$ 
+  \href{https://www.linkedin.com/in/sanchpet/}{linkedin.com/in/sanchpet/} $\cdot$
+  \href{https://github.com/sanchpet}{github.com/sanchpet}}
+\end{center}
+
+% ================= Professional Summary =================
+\cvsection{Professional Summary}
+
+Experienced DevOps and Cloud Infrastructure Engineer specializing in Kubernetes orchestration, CI/CD automation, and cloud-native solutions. Proven track record of building scalable microservices deployment pipelines and enhancing infrastructure observability with modern tools. Strong background in automation with Ansible, Terraform, and GitOps. Skilled in Golang, Python, and multi-platform environment management.
+
+% ================= Work Experience =================
+\cvsection{Work Experience}
+
+% -------- Middle DevOps Engineer --------
+\jobheader{\textbf{Middle DevOps Engineer}}{\textbf{Saint Petersburg, RU}}
+{\href{https://magnit.tech}{Magnit Tech} — {\textit{tech team of Russia's largest retailer with 30K+ stores}}}
+{Aug 2025 -- Present}
+
+\begin{itemize}
+  \item \bulletblock{Designed and automated GitLab CI pipelines for building and deploying a distributed application comprising 15+ Java microservices, reducing deployment lead time by 30\%.}
+  \item \bulletblock{Implemented infrastructure management and deployment automation using Terraform, Ansible, and ArgoCD on Kubernetes clusters hosted in Yandex Cloud.}
+  \item \bulletblock{Collaborated with cross-functional teams to improve CI/CD reliability and application stability across multi-cloud environments.}
+\end{itemize} \vspace{1mm}
+\textbf{Tech Stack:} Kubernetes, GitLab CI/CD, Terraform, Java, .NET, Docker, Yandex Cloud, ArgoCD, Ansible, PostgreSQL, Windows Server.
+
+% -------- Middle Operations Engineer --------
+\jobheader{\textbf{Middle Operations Engineer}}{\textbf{Saint Petersburg, RU}}
+{\href{https://sbertech.ru}{Sber Tech} — {\textit{tech team of the largest bank of Russia}}}
+{Aug 2024 -- Aug 2025}
+
+\begin{itemize}
+  \item \bulletblock{Developed and maintained observability platform for Kubernetes clusters using VictoriaMetrics, Loki, and Tempo, improving system monitoring and fault detection.}
+  \item \bulletblock{Enhanced Kubernetes security by enforcing SecurityContext hardening, PodSecurityAdmission controls, NetworkPolicies, and integrated OIDC authentication via Keycloak.}
+  \item \bulletblock{Implemented Helm-based application lifecycle management with GitOps workflows using ArgoCD, Jenkins, and Nexus artifact repositories.}
+\end{itemize} \vspace{1mm}
+\textbf{Tech Stack:} Kubernetes, Helm, ArgoCD, VictoriaMetrics, Loki, Tempo, Grafana, Jenkins, Ansible, Nexus, SonarQube, BitBucket, Keycloak.
+
+% -------- Junior System Engineer --------
+\jobheader{\textbf{Junior System Engineer}}{\textbf{Saint Petersburg, RU}}
+{\href{https://sweb.ru}{SpaceWeb} — {\textit{local cloud hosting provider}}}
+{Nov 2023 -- Aug 2024}
+
+\begin{itemize}
+  \item \bulletblock{Managed KVM virtualization: performed diagnostics, migrations, and client/infrastructure VM installation; refactored Ansible playbooks automating service migration from RHEL7 to RHEL9.}
+  \item \bulletblock{Deployed and maintained local S3-compatible storage using MinIO and developed a Python FastAPI service for bucket/user management.}
+  \item \bulletblock{Implemented PXE-based OS installation system with Cobbler, authored kickstart scripts, and maintained OS images on bare-metal servers.}
+  \item \bulletblock{Set up Kubernetes-based DBaaS infrastructure comprising VictoriaMetrics, Alertmanager, Loki, and Grafana, supporting deployment and monitoring.}
+\end{itemize} \vspace{1mm}
+\textbf{Tech Stack:} Ansible, Kubernetes, Grafana, VictoriaMetrics, Loki, S3, Docker, GitLab, Apache, Nginx, Bash, Python, KVM, libvirt, Nagios, Puppet, PXE, SVN, IPMI/ipKVM.
+
+% -------- Operations Engineer --------
+\jobheader{\textbf{Operations Engineer}}{\textbf{Saint Petersburg, RU}}
+{\href{https://sweb.ru}{SpaceWeb} — {\textit{local cloud hosting provider}}}
+{Sep 2022 -- Nov 2023}
+
+\begin{itemize}
+  \item \bulletblock{Performed active monitoring and incident response; installed bare-metal servers using PXE; managed DNS zones and mitigated DDoS attacks through custom Bash scripts.}
+\end{itemize}
+
+% -------- Support Engineer --------
+\jobheader{\textbf{Support Engineer}}{\textbf{Saint Petersburg, RU}}
+{\href{https://sweb.ru}{SpaceWeb} — {\textit{local cloud hosting provider}}}
+{Jul 2021 -- Sep 2022}
+
+\begin{itemize}
+  \item \bulletblock{Provided LAMP/LEMP stack troubleshooting for client websites, handled mail and DNS diagnostics; recognized 7 times as best support engineer for outstanding performance.}
+\end{itemize} \vspace{3mm}
+
+% ================= Core Skills =================
+\cvsection{Core Skills}
+
+\textbf{Containers \& Orchestration:} Kubernetes, Docker, Helm, ArgoCD, FluxCD, Kustomize \vspace{1mm}\\
+\textbf{CI/CD \& Version Control:} Git, GitLab CI, GitHub Actions, Jenkins, SonarQube \vspace{1mm}\\
+\textbf{Infrastructure as Code \& Automation:} Ansible, Terraform, GitOps principles \vspace{1mm}\\
+\textbf{Observability \& Monitoring:} VictoriaMetrics, Prometheus, Loki, ELK Stack, Grafana, Alloy, Tempo \vspace{1mm}\\
+\textbf{Programming \& Scripting:} Bash, Python, Golang, Java, .NET \vspace{1mm}\\
+\textbf{Load Balancing \& Proxies:} Nginx, Traefik, HAProxy \vspace{1mm}\\
+\textbf{Other Technologies:} PostgreSQL, S3, Keycloak, Vault, Consul
+
+% ================= Education =================
+\cvsection{Education}
+
+\rowheader{ITMO University}{Saint Petersburg, RU}
+{Master of Science in Computer Systems Networking \& Telecommunications}{2025}
+\textit{Thesis: Development of the DBaaS platform architecture in a Kubernetes cluster}
+
+GPA: 5.0 / 5.0
+
+\vspace{3mm}
+
+\rowheader{ITMO University}{Saint Petersburg, RU}
+{Bachelor of Science in Computer \& Information Systems Security}{2023}
+\textit{Thesis: Development of an automated phishing site search system on virtual hosting servers}
+
+GPA: 4.86 / 5.0
+
+% ================= Languages =================
+\cvsection{Languages}
+\rowheader{English}{}{Fluent}{}
+\rowheader{Spanish}{}{Intermediate (DELE B2)}{}
+\rowheader{Russian}{}{Native}{}
+
+\end{document}
