@@ -49,6 +49,21 @@
   emph(lb),   emph(rb),
 )
 
+// Education entry: uni + location on row 1, degree+year inline on row 2
+#let eduentry(uni, location, year, degree, thesis, gpa) = block(breakable: false, {
+  grid(
+    columns: (1fr, auto),
+    align: (left, right),
+    strong(uni), strong(location),
+  )
+  v(0.5mm)
+  emph[#degree, #year]
+  v(0.5mm)
+  emph[Thesis: #thesis]
+  linebreak()
+  [GPA: #gpa]
+})
+
 #let jobheader(lt, rt, lb, rb) = {
   v(4mm)
   rowheader(lt, rt, lb, rb)
@@ -68,34 +83,36 @@
   #link("https://www.linkedin.com/in/sanchpet/")[linkedin.com/in/sanchpet/]
   $dot$
   #link("https://github.com/sanchpet")[github.com/sanchpet]
+  $dot$
+  #link("https://t.me/sanchpet")[t.me/sanchpet]
 ]
 
 // ── Professional Summary ──────────────────────────────────────────────────────
 #cvsection("Professional Summary")
 
-Experienced DevOps and Cloud Infrastructure Engineer specializing in Kubernetes orchestration, CI/CD automation, and cloud-native solutions. Proven track record of building scalable microservices deployment pipelines and enhancing infrastructure observability with modern tools. Strong background in automation with Ansible, Terraform, and GitOps. Skilled in Golang, Python, and multi-platform environment management.
+DevOps Engineer with 4 years of production experience in Kubernetes, CI/CD automation, and infrastructure observability. Worked across retail, banking, and hosting at significant scale.
 
 // ── Work Experience ───────────────────────────────────────────────────────────
 #cvsection("Work Experience")
 
 // ---- Middle DevOps Engineer -------------------------------------------------
 #jobheader(
-  [*Middle DevOps Engineer*], [*Saint Petersburg, RU*],
-  [#link("https://magnit.tech")[Magnit Tech] — _tech team of Russia's largest retailer with 30K+ stores_],
+  [*DevOps Engineer*], [],
+  [#link("https://magnit.tech")[Magnit Tech] — _electronic document management system for 30K+ store retail network_],
   [_Aug 2025 – Present_],
 )
 
 - Designed and automated GitLab CI pipelines for building and deploying a distributed application comprising 15+ Java microservices, reducing deployment lead time by 30%.
 - Implemented infrastructure management and deployment automation using Terraform, Ansible, and ArgoCD on Kubernetes clusters hosted in Yandex Cloud.
-- Collaborated with cross-functional teams to improve CI/CD reliability and application stability across multi-cloud environments.
+- Defined pipeline standards, deployment gates, and rollback procedures for a 15+ microservice ecosystem, reducing cross-team release friction.
 
 #v(1mm)
 *Tech Stack:* Kubernetes, GitLab CI/CD, Terraform, Java, .NET, Docker, Yandex Cloud, ArgoCD, Ansible, PostgreSQL, Windows Server.
 
 // ---- Middle Operations Engineer ---------------------------------------------
 #jobheader(
-  [*Middle Operations Engineer*], [*Saint Petersburg, RU*],
-  [#link("https://sbertech.ru")[Sber Tech] — _tech team of the largest bank of Russia_],
+  [*DevOps Engineer*], [],
+  [#link("https://sbertech.ru")[Sber Tech] — _Internal Developer Platform for 2000+ engineers, largest bank of Russia_],
   [_Aug 2024 – Aug 2025_],
 )
 
@@ -108,7 +125,7 @@ Experienced DevOps and Cloud Infrastructure Engineer specializing in Kubernetes 
 
 // ---- Junior System Engineer -------------------------------------------------
 #jobheader(
-  [*Junior System Engineer*], [*Saint Petersburg, RU*],
+  [*System Engineer*], [],
   [#link("https://sweb.ru")[SpaceWeb] — _local cloud hosting provider_],
   [_Nov 2023 – Aug 2024_],
 )
@@ -118,60 +135,39 @@ Experienced DevOps and Cloud Infrastructure Engineer specializing in Kubernetes 
 - Implemented PXE-based OS installation system with Cobbler, authored kickstart scripts, and maintained OS images on bare-metal servers.
 - Set up Kubernetes-based DBaaS infrastructure comprising VictoriaMetrics, Alertmanager, Loki, and Grafana, supporting deployment and monitoring.
 
-#v(1mm)
-*Tech Stack:* Ansible, Kubernetes, Grafana, VictoriaMetrics, Loki, S3, Docker, GitLab, Apache, Nginx, Bash, Python, KVM, libvirt, Nagios, Puppet, PXE, SVN, IPMI/ipKVM.
-
-// ---- Operations Engineer ----------------------------------------------------
+// ---- Operations & Support Engineer ------------------------------------------
 #jobheader(
-  [*Operations Engineer*], [*Saint Petersburg, RU*],
+  [*Operations & Support Engineer*], [],
   [#link("https://sweb.ru")[SpaceWeb] — _local cloud hosting provider_],
-  [_Sep 2022 – Nov 2023_],
+  [_Jul 2021 – Nov 2023_],
 )
 
-- Performed active monitoring and incident response; installed bare-metal servers using PXE; managed DNS zones and mitigated DDoS attacks through custom Bash scripts.
+- Monitored infrastructure and responded to incidents, managed DNS zones, mitigated DDoS attacks via Bash scripts, and provided LAMP/LEMP support; recognized 7 times as best support engineer.
 
-// ---- Support Engineer -------------------------------------------------------
-#jobheader(
-  [*Support Engineer*], [*Saint Petersburg, RU*],
-  [#link("https://sweb.ru")[SpaceWeb] — _local cloud hosting provider_],
-  [_Jul 2021 – Sep 2022_],
-)
+// ── Skills ────────────────────────────────────────────────────────────────────
+#cvsection("Skills")
 
-- Provided LAMP/LEMP stack troubleshooting for client websites, handled mail and DNS diagnostics; recognized 7 times as best support engineer for outstanding performance.
+Kubernetes · Docker · Helm · ArgoCD · FluxCD · Kustomize · GitLab CI · GitHub Actions · Jenkins · Terraform · Ansible · GitOps · Yandex Cloud · AWS · VictoriaMetrics · Prometheus · Loki · Grafana · Alloy · Tempo · OpenTelemetry · ELK · Bash · Python · Golang · Nginx · Traefik · HAProxy · PostgreSQL · S3 · Keycloak · Vault · Consul · SonarQube
 
-#v(3mm)
-
-// ── Core Skills ───────────────────────────────────────────────────────────────
-#cvsection("Core Skills")
-
-*Containers & Orchestration:* Kubernetes, Docker, Helm, ArgoCD, FluxCD, Kustomize \
-*CI/CD & Version Control:* Git, GitLab CI, GitHub Actions, Jenkins, SonarQube \
-*Infrastructure as Code & Automation:* Ansible, Terraform, GitOps principles \
-*Observability & Monitoring:* VictoriaMetrics, Prometheus, Loki, ELK Stack, Grafana, Alloy, Tempo \
-*Programming & Scripting:* Bash, Python, Golang, Java, .NET \
-*Load Balancing & Proxies:* Nginx, Traefik, HAProxy \
-*Other Technologies:* PostgreSQL, S3, Keycloak, Vault, Consul
-
+#pagebreak(weak: true)
 // ── Education ─────────────────────────────────────────────────────────────────
 #cvsection("Education")
 
-#rowheader(
-  [ITMO University], [Saint Petersburg, RU],
-  [Master of Science in Computer Systems Networking & Telecommunications], [2025],
+#eduentry(
+  [ITMO University], [Saint Petersburg, RU], [2025],
+  [Master of Science in Computer Systems Networking & Telecommunications],
+  [Development of the DBaaS platform architecture in a Kubernetes cluster],
+  [5.0 / 5.0],
 )
-_Thesis: Development of the DBaaS platform architecture in a Kubernetes cluster_
-
-GPA: 5.0 / 5.0
 
 #v(3mm)
 
-#rowheader(
-  [ITMO University], [Saint Petersburg, RU],
-  [Bachelor of Science in Computer & Information Systems Security], [2023],
+#eduentry(
+  [ITMO University], [Saint Petersburg, RU], [2023],
+  [Bachelor of Science in Computer & Information Systems Security],
+  [Development of an automated phishing site search system on virtual hosting servers],
+  [4.86 / 5.0],
 )
-_Thesis: Development of an automated phishing site search system on virtual hosting servers_
-
-GPA: 4.86 / 5.0
 
 // ── Languages ─────────────────────────────────────────────────────────────────
 #cvsection("Languages")
