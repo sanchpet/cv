@@ -16,8 +16,11 @@ jobs:
 
       - uses: typst-community/setup-typst@v4
 
+      - name: Install Charter font
+        run: sudo apt-get install -y fonts-urw-base35
+
       - name: Compile to SVG
-        run: typst compile Curriculum_Vitae.typ preview.svg
+        run: typst compile Curriculum_Vitae.typ "preview-{p}.svg"
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
