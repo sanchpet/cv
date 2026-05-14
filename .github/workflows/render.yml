@@ -1,6 +1,7 @@
 name: Render CV
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - Curriculum_Vitae.typ
