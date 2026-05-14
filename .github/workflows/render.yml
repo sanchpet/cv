@@ -18,9 +18,13 @@ jobs:
       - uses: typst-community/setup-typst@v4
 
       - name: Compile to SVG
-        run: typst compile --font-path fonts/ Curriculum_Vitae.typ "preview-{p}.svg"
+        run: |
+          mkdir -p preview
+          typst compile --font-path fonts/ Curriculum_Vitae.typ "preview/page-{p}.svg"
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: render preview SVGs"
-          file_pattern: "preview-*.svg"
+          file_pattern: "preview/*.svg"
+          commit_user_name: actions-user
+          commit_user_email: actions@github.com
