@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: typst-compile
+        name: Validate Typst
+        language: system
+        entry: sh -c 'typst compile Curriculum_Vitae.typ /tmp/typst-precommit.pdf && rm -f /tmp/typst-precommit.pdf'
+        files: \.typ$
+        pass_filenames: false
