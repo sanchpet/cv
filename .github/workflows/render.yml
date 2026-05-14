@@ -1,0 +1,25 @@
+name: Render CV
+
+on:
+  push:
+    paths:
+      - Curriculum_Vitae.typ
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: typst-community/setup-typst@v4
+
+      - name: Compile to SVG
+        run: typst compile Curriculum_Vitae.typ preview.svg
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: render preview SVGs"
+          file_pattern: "preview-*.svg"
