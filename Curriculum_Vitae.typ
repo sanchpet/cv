@@ -1,8 +1,6 @@
 // ── Page & base text ─────────────────────────────────────────────────────────
 #set page(paper: "a4", margin: (x: 1.5cm, y: 1.5cm))
 #set text(font: "Charter", size: 10pt, lang: "en")
-// If "Charter" is not found, try "Bitstream Charter" or remove the font line
-// to fall back to Typst's default (New Computer Modern).
 
 #set par(leading: 0.3em, spacing: 0pt)
 #set list(
