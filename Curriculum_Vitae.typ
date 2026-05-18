@@ -88,66 +88,65 @@
 // ── Professional Summary ──────────────────────────────────────────────────────
 #cvsection("Professional Summary")
 
-DevOps Engineer with 4 years of production experience in Kubernetes, CI/CD automation, and infrastructure observability. Worked across retail, banking, and hosting at significant scale.
+DevOps / Platform Engineer with 4 years building Kubernetes-based internal developer platforms at scale — from a 2000-engineer IDP at Russia's largest bank to a 30K-store retail network. Focused on GitOps, IaC, and full-stack observability; contributed to open-source Yandex Cloud Terraform providers. Currently expanding into MLOps infrastructure. Fluent in English, Spanish B2 (DELE), targeting international cloud-native roles.
 
 // ── Work Experience ───────────────────────────────────────────────────────────
 #cvsection("Work Experience")
 
-// ---- Middle DevOps Engineer -------------------------------------------------
+// ---- DevOps Engineer -------------------------------------------------
 #jobheader(
   [*DevOps Engineer*], [],
   [#link("https://magnit.tech")[Magnit Tech] — _electronic document management system for 30K+ store retail network_],
   [_Aug 2025 – Present_],
 )
 
-- Designed and automated GitLab CI pipelines for building and deploying a distributed application comprising 15+ Java microservices, reducing deployment lead time by 30%.
-- Implemented infrastructure management and deployment automation using Terraform, Ansible, and ArgoCD on Kubernetes clusters hosted in Yandex Cloud.
-- Defined pipeline standards, deployment gates, and rollback procedures for a 15+ microservice ecosystem, reducing cross-team release friction.
+- Replaced manual RDP/PowerShell deployments with GitLab CI pipelines for Java and .NET microservices in 2 months with no prior handover — introducing GitFlow, multi-environment rollouts, and Nexus artifact management.
+- Migrated 50+ CentOS 7 VMs to Rocky Linux 8 without data loss under an information security audit, extending OS support lifecycle to 2029.
+- Replaced click-ops Yandex Cloud infrastructure with Terragrunt modules (per-environment state isolation), building custom wrappers with automated Vault secret provisioning; contributed to open-source Yandex Cloud Terraform modules.
+- Containerized Tessa (.NET) platform from VMs to Kubernetes — introducing review environments, reducing deployment time, and cutting VM infrastructure costs.
 
-#v(1mm)
-*Tech Stack:* Kubernetes, GitLab CI/CD, Terraform, Java, .NET, Docker, Yandex Cloud, ArgoCD, Ansible, PostgreSQL, Windows Server.
-
-// ---- Middle Operations Engineer ---------------------------------------------
+// ---- DevOps Engineer ---------------------------------------------
 #jobheader(
   [*DevOps Engineer*], [],
   [#link("https://sbertech.ru")[Sber Tech] — _Internal Developer Platform for 2000+ engineers, largest bank of Russia_],
   [_Aug 2024 – Aug 2025_],
 )
 
-- Developed and maintained observability platform for Kubernetes clusters using VictoriaMetrics, Loki, and Tempo, improving system monitoring and fault detection.
-- Enhanced Kubernetes security by enforcing SecurityContext hardening, PodSecurityAdmission controls, NetworkPolicies, and integrated OIDC authentication via Keycloak.
-- Implemented Helm-based application lifecycle management with GitOps workflows using ArgoCD, Jenkins, and Nexus artifact repositories.
+- Built and maintained observability platform from zero for Kubernetes clusters (VictoriaMetrics, Loki, Tempo, Grafana) serving an Internal Developer Platform for 2000+ engineers
+- Managed lifecycle of 5+ self-hosted Kubernetes clusters — upgrades, CNI and Ingress-Controller installations, capacity planning, and troubleshooting.
+- Hardened Kubernetes security (SecurityContext, PodSecurityAdmission, NetworkPolicies, Keycloak OIDC), passing company-wide information security audit.
+- Consolidated scattered Helm deployments into a unified GitOps mono-repo (ArgoCD), enabling consistent multi-environment rollouts for a team of 15 engineers.
 
-#v(1mm)
-*Tech Stack:* Kubernetes, Helm, ArgoCD, VictoriaMetrics, Loki, Tempo, Grafana, Jenkins, Ansible, Nexus, SonarQube, BitBucket, Keycloak.
-
-// ---- Junior System Engineer -------------------------------------------------
+// ---- System Engineer -------------------------------------------------
 #jobheader(
   [*System Engineer*], [],
-  [#link("https://sweb.ru")[SpaceWeb] — _local cloud hosting provider_],
+  [#link("https://sweb.ru")[SpaceWeb] — _bare-metal and cloud hosting provider_],
   [_Nov 2023 – Aug 2024_],
 )
 
-- Managed KVM virtualization: performed diagnostics, migrations, and client/infrastructure VM installation; refactored Ansible playbooks automating service migration from RHEL7 to RHEL9.
-- Deployed and maintained local S3-compatible storage using MinIO and developed a Python FastAPI service for bucket/user management.
-- Implemented PXE-based OS installation system with Cobbler, authored kickstart scripts, and maintained OS images on bare-metal servers.
-- Set up Kubernetes-based DBaaS infrastructure comprising VictoriaMetrics, Alertmanager, Loki, and Grafana, supporting deployment and monitoring.
+- Automated bare-metal OS provisioning via PXE/Cobbler with kickstart scripts, eliminating manual server setup
+- Refactored Ansible playbooks for RHEL 7→9 migration; managed KVM virtualization at hosting scale
+- Built S3-compatible storage with MinIO and a Python FastAPI service for bucket/user lifecycle management
 
 // ---- Operations & Support Engineer ------------------------------------------
 #jobheader(
   [*Operations & Support Engineer*], [],
-  [#link("https://sweb.ru")[SpaceWeb] — _local cloud hosting provider_],
+  [#link("https://sweb.ru")[SpaceWeb] — _bare-metal and cloud hosting provider_],
   [_Jul 2021 – Nov 2023_],
 )
 
-- Monitored infrastructure and responded to incidents, managed DNS zones, mitigated DDoS attacks via Bash scripts, and provided LAMP/LEMP support; recognized 7 times as best support engineer.
+- Managed infrastructure incidents, DNS zones, and DDoS mitigation; diagnosed and installed bare-metal servers (ipKVM/IPMI), cabled and commissioned datacenter racks; automated routine tasks with Bash scripts.
+- Recognised 7× as best support engineer across the team.
 
+// ── Open Source Projects (placeholder) ───────────────────────────────────────
+// #cvsection("Open Source Projects")
+
+#pagebreak(weak: true)
 // ── Skills ────────────────────────────────────────────────────────────────────
 #cvsection("Skills")
 
-Kubernetes · Docker · Helm · ArgoCD · FluxCD · Kustomize · GitLab CI · GitHub Actions · Jenkins · Terraform · Ansible · GitOps · Yandex Cloud · AWS · VictoriaMetrics · Prometheus · Loki · Grafana · Alloy · Tempo · OpenTelemetry · ELK · Bash · Python · Golang · Nginx · Traefik · HAProxy · PostgreSQL · S3 · Keycloak · Vault · Consul · SonarQube
+Kubernetes · Docker · Helm · ArgoCD · FluxCD · Kustomize · GitLab CI · GitHub Actions · Terraform · Terragrunt · Ansible · GitOps · Yandex Cloud · VictoriaMetrics · Prometheus · Loki · Tempo · Grafana · OpenTelemetry · Bash · Python · Golang · .NET · Nginx · PostgreSQL · S3 · Vault · AWS
 
-#pagebreak(weak: true)
 // ── Education ─────────────────────────────────────────────────────────────────
 #cvsection("Education")
 
@@ -170,6 +169,4 @@ Kubernetes · Docker · Helm · ArgoCD · FluxCD · Kustomize · GitLab CI · Gi
 // ── Languages ─────────────────────────────────────────────────────────────────
 #cvsection("Languages")
 
-#rowheader([English], [], [Fluent], [])
-#rowheader([Spanish], [], [Intermediate (DELE B2)], [])
-#rowheader([Russian], [], [Native], [])
+#strong[English] — Fluent #h(1em) #strong[Spanish] — Intermediate (DELE B2) #h(1em) #strong[Russian] — Native
