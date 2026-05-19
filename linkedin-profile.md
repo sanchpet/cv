@@ -40,22 +40,17 @@ Targeting a DevOps or Platform Engineering role internationally, with relocation
 *Aug 2025 – Present*
 
 - Designed and automated GitLab CI pipelines for 15+ Java microservices, reducing deployment lead time by 30% for a 30K+ store retail network
-- Implemented infrastructure-as-code with Terraform and Ansible; GitOps-driven deployments via ArgoCD on Kubernetes in Yandex Cloud
-- Defined pipeline standards, deployment gates, and rollback procedures — reducing cross-team release friction across a 15+ microservice ecosystem
+- Owned platform infrastructure on Yandex Cloud Kubernetes — Terraform/Terragrunt IaC, ArgoCD-based GitOps, Ansible configuration — enabling self-service deployments for 15+ service teams
+- Established CI/CD standards, deployment gates, and rollback procedures — reducing release bottlenecks across a 15+ microservice ecosystem
 
 ---
 
 ### Sber Tech — DevOps Engineer
 *Aug 2024 – Aug 2025*
 
-- Built and maintained observability platform from zero for Kubernetes clusters (VictoriaMetrics, Loki, Tempo, Grafana) serving an Internal Developer Platform for 2000+ engineers
-
-- Managed lifecycle of 5+ self-hosted Kubernetes clusters — upgrades, CNI and Ingress-Controller installations, capacity planning
-
-- Developed an alerting system, wrote runbooks, managed monitoring of backend services running on VMs
-
-- Hardened Kubernetes security: SecurityContext policies, PodSecurityAdmission, NetworkPolicies, OIDC authentication via Keycloak
-
+- Built observability platform from zero (VictoriaMetrics, Loki, Tempo, Grafana) for an Internal Developer Platform serving 2000+ engineers
+- Managed lifecycle of 5+ self-hosted Kubernetes clusters (upgrades, CNI, Ingress-Controller, capacity planning); built alerting system with runbooks for VM-hosted backend services
+- Hardened Kubernetes security: SecurityContext policies, PodSecurityAdmission, NetworkPolicies, OIDC via Keycloak
 - Implemented GitOps workflows with ArgoCD and Helm for application lifecycle management across multi-tenant clusters
 
 ---
@@ -73,8 +68,7 @@ Targeting a DevOps or Platform Engineering role internationally, with relocation
 *Jul 2021 – Nov 2023*
 
 - Monitored infrastructure and responded to incidents; managed DNS zones and mitigated DDoS attacks via Bash automation
-- Linux bare-metal server performance diagnostics (ipKVM/IPMI), mail server diagnostics, writing simple automation scripts
-- Experience as datacenter engineer, installation & commutation of bare-metal servers
+- Performed Linux bare-metal diagnostics via ipKVM/IPMI; hands-on datacenter experience with physical server installation and cabling
 - Recognised 7× as best support engineer across the team
 
 ---
