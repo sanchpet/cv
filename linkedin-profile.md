@@ -13,13 +13,11 @@ DevOps / Platform Engineer | Kubernetes | Terraform | GitOps | Seeking relocatio
 
 ## About
 
-```text
-DevOps / Platform Engineer with 4 years of production experience building Kubernetes-based infrastructure at scale. At Sber Tech, I contributed to an Internal Developer Platform serving 2000+ engineers — implementing Kubernetes observability (VictoriaMetrics, Loki, Tempo), GitOps workflows, and security hardening. At Magnit Tech, I replaced click-ops infrastructure with GitOps and Terragrunt IaC, migrated 50+ servers to Rocky Linux, and containerized a .NET platform to Kubernetes — all without prior handover documentation.
+DevOps / Platform Engineer with 4 years of production experience building Kubernetes-based infrastructure at scale. At Sber Tech, I contributed to an Internal Developer Platform serving 2000+ engineers — implementing Kubernetes observability (VictoriaMetrics, Loki, Tempo), GitOps workflows, and security hardening. At Magnit Tech, I built a modern delivery platform where there wasn't one — replacing manual deployments with GitOps and Terragrunt IaC, containerizing the .NET platform to Kubernetes, and migrating the server fleet to Rocky Linux under a security audit.
 
-Core stack: Kubernetes · GitOps (ArgoCD, FluxCD) · Terraform/Terragrunt · GitLab CI · Observability (VictoriaMetrics, Grafana, Loki, Tempo) · Ansible.
+Core stack: Kubernetes · Docker · Helm · GitOps (ArgoCD, FluxCD) · Terraform/Terragrunt · GitLab CI · Observability (VictoriaMetrics, Grafana, Loki, Tempo) · Ansible.
 
 Targeting a DevOps or Platform Engineering role internationally, with relocation. Fluent in English (C1) and Spanish (B2) — open to both English-first and Spanish-speaking environments.
-```
 
 ---
 
