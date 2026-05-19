@@ -7,7 +7,7 @@
 
 ## Headline
 
-DevOps / Platform Engineer | Kubernetes | Terraform | GitOps | Seeking relocation
+DevOps / Platform Engineer | Kubernetes | Terraform | GitOps
 
 ---
 
