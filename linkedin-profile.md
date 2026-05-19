@@ -86,197 +86,23 @@ Targeting a DevOps or Platform Engineering role internationally, with relocation
 | ⭐⭐ | Python, Bash, .NET, Golang |
 | ⭐ | FluxCD, GitHub Actions, Kustomize, OpenTelemetry, PostgreSQL, Nginx, AWS |
 
-**Сейчас:**
+**Сейчас (обновлено 2026-05-19):**
 
-GitHub Actions
+*Platform & IaC:* Kubernetes · Terraform · Terragrunt · GitOps · ArgoCD · GitLab CI · GitHub Actions · FluxCD · Helm Charts · CI/CD · Infrastructure as a Code
 
-FluxCD
+*Observability:* VictoriaMetrics · Grafana · Loki · Tempo · Observability
 
-GitLab CI
+*Cloud & DevOps:* Yandex Cloud · Docker · DevOps · DevSecOps
 
+*Automation & Tools:* Ansible · Git · Python · Bash · Nexus · Keycloak
 
-DevOps Engineer at Magnit
+*Linux & Infra:* Linux · Red Hat Linux · Nginx · Apache · KVM · S3 · Nagios
 
-DevOps
+*Ops & Support:* Operations Support · Jenkins · Jira
 
+*Security & Networking:* Information Security · VLAN · Network Security
 
-2 experiences at Magnit and 1 other company
-
-Yandex Cloud
-
-
-DevOps Engineer at Magnit
-
-Terraform
-
-
-DevOps Engineer at Magnit
-
-Operations Support
-
-
-Operations Support Engineer at SpaceWeb
-
-DevSecOps
-
-
-DevOps Engineer at Sberbank-Technology
-
-Observability
-
-
-DevOps Engineer at Sberbank-Technology
-
-GitOps
-
-
-2 experiences at Magnit and 1 other company
-
-CI/CD
-
-
-DevOps Engineer at Magnit
-
-Terragrunt
-
-
-DevOps Engineer at Magnit
-
-Infrastructure as a Code
-
-
-DevOps Engineer at Magnit
-
-Kubernetes
-
-
-2 experiences at Magnit and 1 other company
-
-1 endorsement
-
-Helm Charts
-
-1 endorsement
-
-Ansible
-
-1 endorsement
-
-Git
-
-1 endorsement
-
-ArgoCD
-
-Jenkins
-
-1 endorsement
-
-Nginx
-
-
-Operations Support Engineer at SpaceWeb
-
-1 endorsement
-
-Python (Programming Language)
-
-Red Hat Linux
-
-
-System Engineer at SpaceWeb
-
-Tempo
-
-Nexus
-
-1 endorsement
-
-Keycloak
-
-Apache
-
-1 endorsement
-
-Jira
-
-
-Operations Support Engineer at SpaceWeb
-
-1 endorsement
-
-Kernel-based Virtual Machine (KVM)
-
-
-System Engineer at SpaceWeb
-
-S3
-
-
-System Engineer at SpaceWeb
-
-Nagios
-
-
-System Engineer at SpaceWeb
-
-Grafana
-
-
-System Engineer at SpaceWeb
-
-Loki
-
-
-System Engineer at SpaceWeb
-
-VictoriaMetrics
-
-
-2 experiences at Sberbank-Technology and 1 other company
-
-1 endorsement
-
-Docker
-
-
-System Engineer at SpaceWeb
-
-1 endorsement
-
-Linux
-
-
-2 experiences at SpaceWeb
-
-Passed LinkedIn Skill Assessment
-
-C#
-
-Passed LinkedIn Skill Assessment
-
-C
-
-Passed LinkedIn Skill Assessment
-
-C++
-
-Passed LinkedIn Skill Assessment
-
-Information Security
-
-Bash
-
-
-2 experiences at SpaceWeb
-
-VLAN
-
-Domain Name System (DNS)
-
-Firewalls
-
-Network Security
+*Ассессменты LinkedIn:* C# · C · C++
 ---
 
 ## Featured
