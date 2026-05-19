@@ -7,14 +7,14 @@
 
 ## Headline
 
-DevOps Engineer | Kubernetes | Terraform | GitOps | Seeking relocation
+DevOps / Platform Engineer | Kubernetes | Terraform | GitOps | Seeking relocation
 
 ---
 
 ## About
 
 ```text
-DevOps Engineer with 4 years of production experience building cloud-native infrastructure at scale. At Sber Tech, I contributed to an Internal Developer Platform serving 2000+ engineers — implementing Kubernetes observability (VictoriaMetrics, Loki, Tempo), GitOps workflows, and security hardening. At Magnit Tech, I reduced deployment lead time by 30% through CI/CD automation for a 15+ microservice system powering a 30K+ store retail network.
+DevOps / Platform Engineer with 4 years of production experience building Kubernetes-based infrastructure at scale. At Sber Tech, I contributed to an Internal Developer Platform serving 2000+ engineers — implementing Kubernetes observability (VictoriaMetrics, Loki, Tempo), GitOps workflows, and security hardening. At Magnit Tech, I replaced click-ops infrastructure with GitOps and Terragrunt IaC, migrated 50+ servers to Rocky Linux, and containerized a .NET platform to Kubernetes — all without prior handover documentation.
 
 Core stack: Kubernetes · GitOps (ArgoCD, FluxCD) · Terraform/Terragrunt · GitLab CI · Observability (VictoriaMetrics, Grafana, Loki, Tempo) · Ansible.
 
@@ -39,19 +39,20 @@ Targeting a DevOps or Platform Engineering role internationally, with relocation
 ### Magnit Tech — DevOps Engineer
 *Aug 2025 – Present*
 
-- Designed and automated GitLab CI pipelines for 15+ Java microservices, reducing deployment lead time by 30% for a 30K+ store retail network
-- Owned platform infrastructure on Yandex Cloud Kubernetes — Terraform/Terragrunt IaC, ArgoCD-based GitOps, Ansible configuration — enabling self-service deployments for 15+ service teams
-- Established CI/CD standards, deployment gates, and rollback procedures — reducing release bottlenecks across a 15+ microservice ecosystem
+- Replaced manual RDP/PowerShell deployments with GitLab CI pipelines for Java and .NET microservices in 2 months with no prior handover — introducing GitFlow, multi-environment rollouts, and Nexus artifact management
+- Migrated 50+ CentOS 7 VMs to Rocky Linux 8 without data loss under an information security audit, extending OS support lifecycle to 2029
+- Replaced click-ops Yandex Cloud infrastructure with Terragrunt modules (per-environment state isolation), building custom wrappers with automated Vault secret provisioning; contributed to open-source Yandex Cloud Terraform modules
+- Containerized Tessa (.NET) platform from VMs to Kubernetes — introducing review environments, reducing deployment time, and cutting VM infrastructure costs
 
 ---
 
 ### Sber Tech — DevOps Engineer
 *Aug 2024 – Aug 2025*
 
-- Built observability platform from zero (VictoriaMetrics, Loki, Tempo, Grafana) for an Internal Developer Platform serving 2000+ engineers
-- Managed lifecycle of 5+ self-hosted Kubernetes clusters (upgrades, CNI, Ingress-Controller, capacity planning); built alerting system with runbooks for VM-hosted backend services
-- Hardened Kubernetes security: SecurityContext policies, PodSecurityAdmission, NetworkPolicies, OIDC via Keycloak
-- Implemented GitOps workflows with ArgoCD and Helm for application lifecycle management across multi-tenant clusters
+- Built and maintained observability platform from zero for Kubernetes clusters (VictoriaMetrics, Loki, Tempo, Grafana) serving an Internal Developer Platform for 2000+ engineers
+- Managed lifecycle of 5+ self-hosted Kubernetes clusters — upgrades, CNI and Ingress-Controller installations, capacity planning, and troubleshooting
+- Hardened Kubernetes security (SecurityContext, PodSecurityAdmission, NetworkPolicies, Keycloak OIDC), passing company-wide information security audit
+- Consolidated scattered Helm deployments into a unified GitOps mono-repo (ArgoCD), enabling consistent multi-environment rollouts for a team of 15 engineers
 
 ---
 
@@ -67,13 +68,25 @@ Targeting a DevOps or Platform Engineering role internationally, with relocation
 ### SpaceWeb — Operations & Support Engineer
 *Jul 2021 – Nov 2023*
 
-- Monitored infrastructure and responded to incidents; managed DNS zones and mitigated DDoS attacks via Bash automation
-- Performed Linux bare-metal diagnostics via ipKVM/IPMI; hands-on datacenter experience with physical server installation and cabling
+- Managed infrastructure incidents, DNS zones, and DDoS mitigation; diagnosed and installed bare-metal servers (ipKVM/IPMI), cabled and commissioned datacenter racks; automated routine tasks with Bash scripts
 - Recognised 7× as best support engineer across the team
 
 ---
 
 ## Skills (топ для LinkedIn)
+
+**Предложение (на основе CV + позиционирование Platform Engineer):**
+
+> Приоритет: убрать нерелевантное (Jenkins, C/C++/C#, Nagios, Apache, VLAN, DNS, Firewalls).
+> Добавить/поднять: Terragrunt, Helm, OpenTelemetry, Vault, .NET, Golang, AWS.
+
+| Приоритет | Навык |
+|-----------|-------|
+| ⭐⭐⭐ | Kubernetes, Terraform, Terragrunt, GitOps, ArgoCD, GitLab CI |
+| ⭐⭐⭐ | VictoriaMetrics, Grafana, Loki, Tempo, Observability |
+| ⭐⭐ | Helm, Docker, Ansible, Yandex Cloud, Vault, S3 |
+| ⭐⭐ | Python, Bash, .NET, Golang |
+| ⭐ | FluxCD, GitHub Actions, Kustomize, OpenTelemetry, PostgreSQL, Nginx, AWS |
 
 **Сейчас:**
 
