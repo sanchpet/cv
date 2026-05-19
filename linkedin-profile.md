@@ -73,21 +73,6 @@ Targeting a DevOps or Platform Engineering role internationally, with relocation
 
 ## Skills (топ для LinkedIn)
 
-**Предложение (на основе CV + позиционирование Platform Engineer):**
-
-> Приоритет: убрать нерелевантное (Jenkins, C/C++/C#, Nagios, Apache, VLAN, DNS, Firewalls).
-> Добавить/поднять: Terragrunt, Helm, OpenTelemetry, Vault, .NET, Golang, AWS.
-
-| Приоритет | Навык |
-|-----------|-------|
-| ⭐⭐⭐ | Kubernetes, Terraform, Terragrunt, GitOps, ArgoCD, GitLab CI |
-| ⭐⭐⭐ | VictoriaMetrics, Grafana, Loki, Tempo, Observability |
-| ⭐⭐ | Helm, Docker, Ansible, Yandex Cloud, Vault, S3 |
-| ⭐⭐ | Python, Bash, .NET, Golang |
-| ⭐ | FluxCD, GitHub Actions, Kustomize, OpenTelemetry, PostgreSQL, Nginx, AWS |
-
-**Сейчас (обновлено 2026-05-19):**
-
 *Platform & IaC:* Kubernetes · Terraform · Terragrunt · GitOps · ArgoCD · GitLab CI · GitHub Actions · FluxCD · Helm Charts · CI/CD · Infrastructure as a Code
 
 *Observability:* VictoriaMetrics · Grafana · Loki · Tempo · Observability
