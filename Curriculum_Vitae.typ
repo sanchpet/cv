@@ -88,16 +88,28 @@
 // ── Professional Summary ──────────────────────────────────────────────────────
 #cvsection("Professional Summary")
 
-DevOps / Platform Engineer with 4 years building Kubernetes-based internal developer platforms at scale — from a 2000-engineer IDP at Russia's largest bank to a 30K-store retail network. Focused on GitOps, IaC, and full-stack observability; contributed to open-source Yandex Cloud Terraform providers. Currently expanding into MLOps infrastructure. Fluent in English, Spanish B2 (DELE), targeting international cloud-native roles.
+Senior Kubernetes Engineer with 5 years in infrastructure — from bare-metal hosting at SpaceWeb to production Kubernetes: an Internal Developer Platform for 2000+ engineers at Sber Tech, a delivery platform for Magnit's 30K-store retail network, and now a multi-cluster fleet at TradingView. Focused on control-plane reliability, GitOps, IaC, and observability, and increasingly on AgentOps — LLM agents that operate infrastructure behind a human approval gate. Maintain an open-source Go toolchain for a hosting API and contribute upstream. Fluent in English, Spanish B2 (DELE).
 
 // ── Work Experience ───────────────────────────────────────────────────────────
 #cvsection("Work Experience")
+
+// ---- Senior Kubernetes Engineer ---------------------------------------------
+#jobheader(
+  [*Senior Kubernetes Engineer*], [],
+  [#link("https://www.tradingview.com")[TradingView] — _charting and trading platform for 100M+ traders_],
+  [_Jul 2026 – Present_],
+)
+
+- Closed API-server memory exhaustion across the production fleet: control-plane memory fixes and an admission policy-engine upgrade that cut its load on the API servers by an order of magnitude, shipped through staged change windows.
+- Replaced long-lived static delivery tokens with automatically rotated short-lived credentials on every production cluster, bare-metal and managed cloud, cutting the GitOps delivery hub over cluster by cluster; automated identity-service admin password rotation.
+- Hardened production nodes and rolled out a security benchmark scanner to the whole fleet, fixing a scheduler defect in the scanner that surfaced only on the largest cluster.
+- Built an LLM agent that proposes cluster component upgrades — daily runs on a durable workflow engine, per-call cost accounting, human approval before any change reaches a cluster; moved the team's AI code reviewer into the platform build pipeline.
 
 // ---- DevOps Engineer -------------------------------------------------
 #jobheader(
   [*DevOps Engineer*], [],
   [#link("https://magnit.tech")[Magnit Tech] — _electronic document management system for 30K+ store retail network_],
-  [_Aug 2025 – Present_],
+  [_Aug 2025 – Jul 2026_],
 )
 
 - Replaced manual RDP/PowerShell deployments with GitLab CI pipelines for Java and .NET microservices in 2 months with no prior handover — introducing GitFlow, multi-environment rollouts, and Nexus artifact management.
@@ -138,7 +150,6 @@ DevOps / Platform Engineer with 4 years building Kubernetes-based internal devel
 - Managed infrastructure incidents, DNS zones, and DDoS mitigation; diagnosed and installed bare-metal servers (ipKVM/IPMI), cabled and commissioned datacenter racks; automated routine tasks with Bash scripts.
 - Recognised 7× as best support engineer across the team.
 
-#pagebreak(weak: true)
 // ── Open Source ───────────────────────────────────────────────────────────────
 #cvsection("Open Source")
 
