@@ -88,16 +88,29 @@
 // ── Professional Summary ──────────────────────────────────────────────────────
 #cvsection("Professional Summary")
 
-DevOps / Platform Engineer with 4 years building Kubernetes-based internal developer platforms at scale — from a 2000-engineer IDP at Russia's largest bank to a 30K-store retail network. Focused on GitOps, IaC, and full-stack observability; contributed to open-source Yandex Cloud Terraform providers. Currently expanding into MLOps infrastructure. Fluent in English, Spanish B2 (DELE), targeting international cloud-native roles.
+Senior Kubernetes Engineer with 5 years in infrastructure — from bare-metal hosting at SpaceWeb to production Kubernetes: an Internal Developer Platform for 2000+ engineers at Sber Tech, a delivery platform for Magnit's 30K-store retail network, and now the Kubernetes platform of TradingView's global trading service. Focused on control-plane reliability, GitOps, IaC, and observability; lately also AgentOps. Maintain an open-source Go toolchain for a hosting API and contribute upstream. Fluent in English, Spanish B2 (DELE).
 
 // ── Work Experience ───────────────────────────────────────────────────────────
 #cvsection("Work Experience")
+
+// ---- Senior Kubernetes Engineer ---------------------------------------------
+#jobheader(
+  [*Senior Kubernetes Engineer*], [],
+  [#link("https://www.tradingview.com")[TradingView] — _Kubernetes platform team for a global trading service, clusters worldwide_],
+  [_Jul 2026 – Present_],
+)
+
+- Cluster reliability across the production fleet: API-server memory tuning, kubelet configuration updates, OS kernel tuning; responsible for upgrades of key cluster operators.
+- Security: bringing clusters to CIS compliance together with the security team; short-lived auto-rotated credentials for GitOps delivery, identity-service admin password rotation.
+- Developer experience: shipped a krew plugin for the company's engineers that assembles the cluster registry from multiple sources and runs cluster health checks.
+- Building AI agents that automate the team's work with LangGraph, Temporal and the Claude Agent SDK: an AI reviewer for Helm changes, in production, and an agent that prepares cluster component upgrades for human approval.
+- Contributor to the company's AI platform built on kagent and agentgateway.
 
 // ---- DevOps Engineer -------------------------------------------------
 #jobheader(
   [*DevOps Engineer*], [],
   [#link("https://magnit.tech")[Magnit Tech] — _electronic document management system for 30K+ store retail network_],
-  [_Aug 2025 – Present_],
+  [_Aug 2025 – Jul 2026_],
 )
 
 - Replaced manual RDP/PowerShell deployments with GitLab CI pipelines for Java and .NET microservices in 2 months with no prior handover — introducing GitFlow, multi-environment rollouts, and Nexus artifact management.
@@ -117,35 +130,28 @@ DevOps / Platform Engineer with 4 years building Kubernetes-based internal devel
 - Hardened Kubernetes security (SecurityContext, PodSecurityAdmission, NetworkPolicies, Keycloak OIDC), passing company-wide information security audit.
 - Consolidated scattered Helm deployments into a unified GitOps mono-repo (ArgoCD), enabling consistent multi-environment rollouts for a team of 15 engineers.
 
-// ---- System Engineer -------------------------------------------------
+// ---- SpaceWeb ------------------------------------------------------------
 #jobheader(
-  [*System Engineer*], [],
+  [*Operations & Support → System Engineer*], [],
   [#link("https://sweb.ru")[SpaceWeb] — _bare-metal and cloud hosting provider_],
-  [_Nov 2023 – Aug 2024_],
+  [_Jul 2021 – Aug 2024_],
 )
 
-- Automated bare-metal OS provisioning via PXE/Cobbler with kickstart scripts, eliminating manual server setup
-- Refactored Ansible playbooks for RHEL 7→9 migration; managed KVM virtualization at hosting scale
-- Built S3-compatible storage with MinIO and a Python FastAPI service for bucket/user lifecycle management
-
-// ---- Operations & Support Engineer ------------------------------------------
-#jobheader(
-  [*Operations & Support Engineer*], [],
-  [#link("https://sweb.ru")[SpaceWeb] — _bare-metal and cloud hosting provider_],
-  [_Jul 2021 – Nov 2023_],
-)
-
-- Managed infrastructure incidents, DNS zones, and DDoS mitigation; diagnosed and installed bare-metal servers (ipKVM/IPMI), cabled and commissioned datacenter racks; automated routine tasks with Bash scripts.
-- Recognised 7× as best support engineer across the team.
-
-// ── Open Source Projects (placeholder) ───────────────────────────────────────
-// #cvsection("Open Source Projects")
+- Automated bare-metal OS provisioning with PXE/Cobbler and kickstart; refactored Ansible playbooks for the RHEL 7→9 migration; managed KVM virtualization at hosting scale.
+- Built S3-compatible storage on MinIO with a Python FastAPI service for bucket and user lifecycle.
+- Started in operations: incidents, DNS, DDoS mitigation, bare-metal servers and datacenter racks; recognised 7× as best support engineer.
 
 #pagebreak(weak: true)
+// ── Open Source ───────────────────────────────────────────────────────────────
+#cvsection("Open Source")
+
+- *SpaceWeb toolchain* — #link("https://github.com/sanchpet/sweb-go-sdk")[Go SDK] for the sweb.ru hosting API with three consumers on top: a kubectl-style #link("https://github.com/sanchpet/sweb")[CLI], a #link("https://registry.terraform.io/providers/sanchpet/sweb")[Terraform provider] (Plugin Framework, published in the Terraform Registry), and a #link("https://github.com/sanchpet/cert-manager-webhook-spaceweb")[cert-manager DNS-01 webhook] for wildcard certificates, shipped as an image and OCI Helm chart; releases automated with release-please and GoReleaser.
+- *Upstream contributions* — Super Productivity (SuperSync Helm chart fixes, plugin API), Yandex Cloud Terraform modules (Kafka, Redis, Compute), terraform-provider-threexui, prometheus-community/helm-charts, aqua-registry, external-secrets.
+
 // ── Skills ────────────────────────────────────────────────────────────────────
 #cvsection("Skills")
 
-Kubernetes · Docker · Helm · ArgoCD · FluxCD · Kustomize · GitLab CI · GitHub Actions · Terraform · Terragrunt · Ansible · GitOps · Yandex Cloud · VictoriaMetrics · Prometheus · Loki · Tempo · Grafana · OpenTelemetry · Bash · Python · Golang · .NET · Nginx · PostgreSQL · S3 · Vault · AWS
+Kubernetes · Docker · Helm · ArgoCD · FluxCD · Kustomize · GitLab CI · GitHub Actions · Terraform · Terragrunt · Ansible · GitOps · Yandex Cloud · VictoriaMetrics · Prometheus · Loki · Tempo · Grafana · OpenTelemetry · Bash · Python · Golang · .NET · Nginx · PostgreSQL · S3 · Vault · AWS · Kyverno · LangGraph · Temporal · Claude Agent SDK · kagent · agentgateway
 
 // ── Education ─────────────────────────────────────────────────────────────────
 #cvsection("Education")
