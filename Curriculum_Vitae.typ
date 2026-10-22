@@ -138,10 +138,13 @@ DevOps / Platform Engineer with 4 years building Kubernetes-based internal devel
 - Managed infrastructure incidents, DNS zones, and DDoS mitigation; diagnosed and installed bare-metal servers (ipKVM/IPMI), cabled and commissioned datacenter racks; automated routine tasks with Bash scripts.
 - Recognised 7× as best support engineer across the team.
 
-// ── Open Source Projects (placeholder) ───────────────────────────────────────
-// #cvsection("Open Source Projects")
-
 #pagebreak(weak: true)
+// ── Open Source ───────────────────────────────────────────────────────────────
+#cvsection("Open Source")
+
+- *SpaceWeb toolchain* — #link("https://github.com/sanchpet/sweb-go-sdk")[Go SDK] for the sweb.ru hosting API with three consumers on top: a kubectl-style #link("https://github.com/sanchpet/sweb")[CLI], a #link("https://registry.terraform.io/providers/sanchpet/sweb")[Terraform provider] (Plugin Framework, published in the Terraform Registry), and a #link("https://github.com/sanchpet/cert-manager-webhook-spaceweb")[cert-manager DNS-01 webhook] for wildcard certificates, shipped as an image and OCI Helm chart; releases automated with release-please and GoReleaser.
+- *Upstream contributions* — Super Productivity (SuperSync Helm chart fixes, plugin API), Yandex Cloud Terraform modules (Kafka, Redis, Compute), terraform-provider-threexui, prometheus-community/helm-charts, aqua-registry, external-secrets.
+
 // ── Skills ────────────────────────────────────────────────────────────────────
 #cvsection("Skills")
 
